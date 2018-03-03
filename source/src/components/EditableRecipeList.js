@@ -9,8 +9,6 @@ class EditableRecipeList extends React.Component {
         id={recipe.id}
         title={recipe.title}
         description={recipe.description}
-        img={recipe.img}
-        category={recipe.category}
         onFormSubmit={this.props.onFormSubmit}
         onTrashClick={this.props.onTrashClick}
       />

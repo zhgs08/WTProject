@@ -3,7 +3,6 @@ import EditableRecipeList from './EditableRecipeList';
 import CommentRecipeList from './CommentRecipeList';
 import ToggleableRecipeForm from './ToggleableRecipeForm';
 import helpers from '../utils/helpers';
-import Login from './Login';
 
 class RecipeMain extends React.Component {
 
@@ -16,19 +15,14 @@ class RecipeMain extends React.Component {
           description: "Test description 1",
           title: "Test title 1",
           id: helpers.guid(),
-          img: "",
-          category: "Dessert",
         },
         {
           description: "Test description 2",
           title: "Test title 2",
           id: helpers.guid(),
-          img: "http://img.taste.com.au/rI_yFqAp/taste/2016/11/raspberry-honey-dessert-cake-92136-1.jpeg",
-          category: "Dessert",
         }
       ],
-      username: 'zhgs',
-      password: 'zhgs',
+    
     };
   }
 
@@ -57,8 +51,6 @@ class RecipeMain extends React.Component {
         return Object.assign({}, recipe, {
           title: newRecipe.title,
           description: newRecipe.description,
-          img: newRecipe.img,
-          category: newRecipe.category,
         });
       } else {
         return recipe;
@@ -80,22 +72,8 @@ class RecipeMain extends React.Component {
     })
   };
 
-  handleChangeUsername (text) {
-    this.setState ({username: text});
-  }
-
-  handleChangePassword (text) {
-    this.setState ({password: text});
-  }
 
   render() {
-    if (!this.state.username || !this.state.password) {
-      return (
-        <div>
-          <Login />
-        </div>
-      );
-    }
     return (
       <div className="gtco-container">
               <div className="fh5co-text">

@@ -11,8 +11,6 @@ let helpers = (function () {
     const recipe = {
       title: attrs.title || 'Recipe',
       description: attrs.description || 'Description',
-      img: attrs.img || "http://img.taste.com.au/rI_yFqAp/taste/2016/11/raspberry-honey-dessert-cake-92136-1.jpeg",
-      category: attrs.category || 'Category',
       id: guid(),
     };
     return recipe;
