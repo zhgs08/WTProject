@@ -37,7 +37,7 @@ class CommentForm extends React.Component {
         <div className='content'>
           <div className='ui form'>
             <div className='field'>
-              <label>Title</label>
+              <label>Username</label>
               <input
                 type='text'
                 value={this.state.username}
@@ -45,7 +45,7 @@ class CommentForm extends React.Component {
               />
             </div>
             <div className='field'>
-              <label>Description</label>
+              <label>Comment</label>
               <input
                 type='text'
                 value={this.state.userComment}

@@ -7,6 +7,8 @@ class RecipeForm extends React.Component {
     this.state = {
       title: this.props.title || '',
       description: this.props.description || '',
+      img: this.props.img || '',
+      category: this.props.category ||  '',
     }
   }
 
@@ -16,9 +18,16 @@ class RecipeForm extends React.Component {
     });
   };
 
+
   handleDescriptionChange = (e) => {
     this.setState({
       description: e.target.value
+    });
+  };
+
+   handleCategoryChange = (e) => {
+    this.setState({
+      category: e.target.value
     });
   };
 
@@ -51,6 +60,14 @@ class RecipeForm extends React.Component {
                 value={this.state.description}
                 onChange={this.handleDescriptionChange}
               />
+            </div>
+            <div className='field'>
+              <label>Category</label>
+              <select className="form-control">
+                              <option value={this.state.category} onChange={this.handleCategoryChange}> Desserts </option>
+                              <option value={this.state.category} onChange={this.handleCategoryChange}> Cookies </option>
+                              <option value={this.state.category} onChange={this.handleCategoryChange}> Pancakes </option>
+                            </select>
             </div>
             <div className='ui two bottom attached buttons'>
               <button

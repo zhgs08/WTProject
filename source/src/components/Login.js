@@ -1,28 +1,21 @@
 import React from 'react';
 import LoginForm from './LoginForm';
+import Home from './Home';
 
 class Login extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			users: [
+			users: [ 
 				{
-					userId: 0,
-					name: 'Gaukhar Zharkeyeva',
-					email: 'zhgs@gmail.com',
-					username: 'zhgs',
-					password: 'zhgs',
+					id: 1,
+					name: '',
+					email: '',
+					username: '',
+					password: '',
+				
 				}
-			],
-			userFiles: [
-				{
-					id: 0,
-					text: 'The first recipe',
-				},
-			],
-
-
-		    text: '',
+			]
 		}
 	}
 	render() {
@@ -31,7 +24,7 @@ class Login extends React.Component {
 		    		<div className="fh5co-text">
 						<LoginForm
 							users = {this.state.users}
-							userId = {this.state.userId}
+							id = {this.state.id}
 							name = {this.state.name}
 							email = {this.state.email}
 							username = {this.state.username}

@@ -1,9 +1,8 @@
 import React from 'react';
 import EditableRecipeList from './EditableRecipeList';
 import ToggleableRecipeForm from './ToggleableRecipeForm';
-import CommentRecipeList from './CommentRecipeList';
-import ToggleableCommentForm from './ToggleableCommentForm';
 import helpers from '../utils/helpers';
+import Login from './Login';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -12,22 +11,31 @@ class Home extends React.Component {
     this.state = {
       recipes: [
         {
-          description: "Test description 1",
-          title: "Test title 1",
+          description: "You only live once",
+          title: "Cupcake",
           id: helpers.guid(),
+          img: "http://d3ba08y2c5j5cf.cloudfront.net/wp-content/uploads/2014/11/Singapore-10-favourite-desserts-1024x686.jpg",
+          category: "Dessert",
         },
         {
           description: "Test description 2",
           title: "Test title 2",
           id: helpers.guid(),
+          img: "http://img.taste.com.au/rI_yFqAp/taste/2016/11/raspberry-honey-dessert-cake-92136-1.jpeg",
+          category: "Dessert",
         }
       ],
+      username: 'zhgs',
+      password: 'zhgs',
+     
       comments: [
         {
-          username: "zhgs",
-          userComment: "tasty",
+          id: "",
+          username: "",
+          userComment: "",
         },
-      ]
+      ],
+      text: '',
     };
   }
 
@@ -77,6 +85,7 @@ class Home extends React.Component {
     const newArr = this.state.comments.map((comment) => {
       if (comment.id === newComment.id) {
         return Object.assign({}, comment, {
+          comments: newArr,
           username: newComment.username,
           userComment: newComment.userComment,
         });
@@ -101,26 +110,43 @@ class Home extends React.Component {
     })
   };
 
-	render() {
-	    return (
-		    	<div className="gtco-container">
-			    	<div className="row">
-  						<div className="col-md-8 col-md-offset-2 text-center gtco-heading">
-  							<h2 className="cursive-font primary-color">Popular Dishes</h2>
-  							<p>All in Good Taste!</p>
-  						</div>
-					  </div>
-					  <EditableRecipeList
-			            recipes={this.state.recipes}
-			            onFormSubmit={this.handleEditFormSubmit}
-			            onTrashClick={this.handleTrashClick}
-			      />
-			      <ToggleableRecipeForm
-			            onFormSubmit={this.handleCreateFormSubmit}
-			      />
-				</div>
-    	);
-  	}
+  handleChangeUsername (text) {
+    this.setState ({username: text});
+  }
+
+  handleChangePassword (text) {
+    this.setState ({password: text});
+  }
+
+  
+  render() {
+    if (!this.state.username || !this.state.password) {
+      return (
+        <div>
+          <Login />
+        </div>
+      );
+    }
+    return (
+      <div className="gtco-container">
+              <div className="fh5co-text">
+                <div className='extra content'>
+                         
+                <EditableRecipeList
+                  recipes={this.state.recipes}
+                  onFormSubmit={this.handleEditFormSubmit}
+                  onTrashClick={this.handleTrashClick}
+                />
+                <ToggleableRecipeForm
+                  onFormSubmit={this.handleCreateFormSubmit}
+                />
+                  
+              </div>
+            </div>
+          </div>
+  
+    );
+  }
 }
 
 export default Home;
