@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "126116493058",
+    "firebase_url": "https://chatingapp-d368c.firebaseio.com",
+    "project_id": "chatingapp-d368c",
+    "storage_bucket": "chatingapp-d368c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126116493058:android:0db50d111db31471",
+        "android_client_info": {
+          "package_name": "com.example.d_kunesbaeva.chatingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126116493058-73hc632av7ibvccqcblnvrgq4prs8mhd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.d_kunesbaeva.chatingapp",
+            "certificate_hash": "6d917feebb0a0418e10841dc3e57e1b6a6d875ff"
+          }
+        },
+        {
+          "client_id": "126116493058-aksr67l509sj0kkt7hf0drhqfpc55hj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmoXwY0yfmhKbcYbRGMXRVB66K4426G7Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126116493058-aksr67l509sj0kkt7hf0drhqfpc55hj3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126116493058:android:5094eaaaab2b377f",
+        "android_client_info": {
+          "package_name": "com.example.diana.moneycontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126116493058-aksr67l509sj0kkt7hf0drhqfpc55hj3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmoXwY0yfmhKbcYbRGMXRVB66K4426G7Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
